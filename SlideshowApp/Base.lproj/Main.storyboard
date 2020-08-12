@@ -37,6 +37,7 @@
                                 <state key="normal" title="進む"/>
                                 <connections>
                                     <action selector="nextImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MfE-il-XeZ"/>
+                                    <action selector="slideShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Qz-nf-D4a"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NqZ-bh-teV">
@@ -72,6 +73,8 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="NqZ-bh-teV" id="h47-78-FpZ"/>
+                        <outlet property="nextButton" destination="osB-3j-clc" id="Op6-D7-6HM"/>
+                        <outlet property="prevButton" destination="nZh-a8-kWW" id="3v3-Bt-OHq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

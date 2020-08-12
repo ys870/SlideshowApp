@@ -86,15 +86,23 @@ class ViewController: UIViewController {
     
     var setTitle: String = String()
     
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var prevButton: UIButton!
+    
     @IBAction func slideShow(_ sender: Any) {
         if timer == nil {
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateImage), userInfo: nil, repeats: true)
+        // 戻るボタンと再生ボタンを無効にする
+            nextButton.isEnabled = false
+            prevButton.isEnabled = false
             
         } else if timer != nil {
             timer.invalidate()
             timer = nil
-        // 戻るボタンと再生ボタンを無効にするコード
-            
+        
+        // 戻るボタンと再生ボタンを有効にする
+            nextButton.isEnabled = true
+            prevButton.isEnabled = true
         }
     }
     
