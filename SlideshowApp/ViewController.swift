@@ -78,6 +78,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    //　タイマー
+    var timer: Timer!
+    //　タイマー用の時間のための変数
+    var timer_sec: Float = 0
+    
+    @IBAction func slideShow(_ sender: Any) {
+        if timer == nil {
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateImage), userInfo: nil, repeats: true)
+        }
+    }
+    
+    // 画像更新用の関数
+    @objc func updateImage(_ timer: Timer) {
+        //　タイマーの時間を2秒ずつプラスする
+        self.timer_sec += 2.0
+        
+        //　画像番号をプラス1
+        imageNumber += 1
+        
+        //　画像表示用の関数を呼び出す
+        showImage()
+
+    }
 
 }
 

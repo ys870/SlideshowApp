@@ -47,7 +47,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="再生/停止"/>
                                 <connections>
-                                    <action selector="slideShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUx-4r-XmA"/>
+                                    <action selector="slideShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A98-vN-aAD"/>
                                 </connections>
                             </button>
                         </subviews>
