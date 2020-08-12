@@ -84,9 +84,17 @@ class ViewController: UIViewController {
     //　タイマー用の時間のための変数
     var timer_sec: Float = 0
     
+    var setTitle: String = String()
+    
     @IBAction func slideShow(_ sender: Any) {
         if timer == nil {
             timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateImage), userInfo: nil, repeats: true)
+            
+        } else if timer != nil {
+            timer.invalidate()
+            timer = nil
+        // 戻るボタンと再生ボタンを無効にするコード
+            
         }
     }
     
