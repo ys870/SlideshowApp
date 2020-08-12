@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZh-a8-kWW">
-                                <rect key="frame" x="25" y="612" width="100" height="50"/>
+                                <rect key="frame" x="25" y="612" width="75" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="N2z-yx-uLA"/>
-                                    <constraint firstAttribute="width" constant="100" id="XQw-A6-obp"/>
+                                    <constraint firstAttribute="height" constant="50" id="iLW-tl-240"/>
+                                    <constraint firstAttribute="width" constant="75" id="uPr-SX-z84"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="戻る"/>
@@ -28,10 +28,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osB-3j-clc">
-                                <rect key="frame" x="289" y="612" width="100" height="50"/>
+                                <rect key="frame" x="314" y="612" width="75" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="IHJ-6p-7Df"/>
-                                    <constraint firstAttribute="height" constant="50" id="fn3-Ra-FTS"/>
+                                    <constraint firstAttribute="height" constant="50" id="4am-zk-CBL"/>
+                                    <constraint firstAttribute="width" constant="75" id="YJx-SL-G0i"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="進む"/>
@@ -40,19 +40,33 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NqZ-bh-teV">
-                                <rect key="frame" x="25" y="144" width="364" height="368"/>
+                                <rect key="frame" x="25" y="144" width="364" height="418"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsS-nk-fYc">
+                                <rect key="frame" x="125" y="612" width="164" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="再生/停止"/>
+                                <connections>
+                                    <action selector="slideShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qUx-4r-XmA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="osB-3j-clc" secondAttribute="trailing" constant="25" id="9ko-tz-tom"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="osB-3j-clc" secondAttribute="bottom" constant="200" id="CrE-tb-2MF"/>
-                            <constraint firstItem="NqZ-bh-teV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="HGc-yu-gUy"/>
-                            <constraint firstItem="nZh-a8-kWW" firstAttribute="top" secondItem="NqZ-bh-teV" secondAttribute="bottom" constant="100" id="UNU-a1-WGG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nZh-a8-kWW" secondAttribute="bottom" constant="200" id="Zn0-ro-htt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NqZ-bh-teV" secondAttribute="trailing" constant="25" id="e4A-fO-BFe"/>
-                            <constraint firstItem="NqZ-bh-teV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="eDB-Lm-KIe"/>
-                            <constraint firstItem="nZh-a8-kWW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="q5O-QC-MwT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="osB-3j-clc" secondAttribute="trailing" constant="25" id="0M0-YO-lZa"/>
+                            <constraint firstItem="osB-3j-clc" firstAttribute="top" secondItem="NqZ-bh-teV" secondAttribute="bottom" constant="50" id="4ha-BE-pw4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NqZ-bh-teV" secondAttribute="trailing" constant="25" id="52u-Fn-aPh"/>
+                            <constraint firstItem="NqZ-bh-teV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="CqK-2n-nh5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SsS-nk-fYc" secondAttribute="bottom" constant="200" id="JaZ-jP-rej"/>
+                            <constraint firstItem="osB-3j-clc" firstAttribute="leading" secondItem="SsS-nk-fYc" secondAttribute="trailing" constant="25" id="LeW-bP-iW7"/>
+                            <constraint firstItem="nZh-a8-kWW" firstAttribute="top" secondItem="NqZ-bh-teV" secondAttribute="bottom" constant="50" id="Mf1-k7-5rk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="osB-3j-clc" secondAttribute="bottom" constant="200" id="RyM-kk-299"/>
+                            <constraint firstItem="SsS-nk-fYc" firstAttribute="top" secondItem="NqZ-bh-teV" secondAttribute="bottom" constant="50" id="Wzh-Sr-BeI"/>
+                            <constraint firstItem="NqZ-bh-teV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="ZHJ-ee-WvV"/>
+                            <constraint firstItem="SsS-nk-fYc" firstAttribute="leading" secondItem="nZh-a8-kWW" secondAttribute="trailing" constant="25" id="pD3-ax-Doa"/>
+                            <constraint firstItem="nZh-a8-kWW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="pDP-II-iu5"/>
+                            <constraint firstItem="nZh-a8-kWW" firstAttribute="top" secondItem="NqZ-bh-teV" secondAttribute="bottom" constant="50" id="sbQ-Zu-nsp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nZh-a8-kWW" secondAttribute="bottom" constant="200" id="uGJ-Ov-RWg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
