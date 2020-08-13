@@ -11,6 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBAction func tapImage(_ sender: Any) {
+        performSegue(withIdentifier: "zoomImage", sender: nil)
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
     
     //　画像番号の初期値
     //　0でないのは、アプリ起動直後に戻るボタンを押した時、配列の最後にある画像を表示するため
