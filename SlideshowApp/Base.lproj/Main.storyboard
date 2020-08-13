@@ -42,6 +42,7 @@
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NqZ-bh-teV">
                                 <rect key="frame" x="25" y="144" width="364" height="418"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsS-nk-fYc">
                                 <rect key="frame" x="125" y="612" width="164" height="50"/>
@@ -80,6 +81,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="wPX-rV-2IW">
+            <objects>
+                <viewController id="Bg8-pv-tMF" customClass="SecondViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nss-wD-YUi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndO-OX-73g">
+                                <rect key="frame" x="169.5" y="612" width="75" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="g9U-kh-08i"/>
+                                    <constraint firstAttribute="height" constant="50" id="n47-ei-hdi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="slideShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gwX-Jv-UAb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nk6-KU-bjl">
+                                <rect key="frame" x="25" y="144" width="364" height="418"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ndO-OX-73g" firstAttribute="top" secondItem="Nk6-KU-bjl" secondAttribute="bottom" constant="50" id="385-uz-qnl"/>
+                            <constraint firstItem="SyK-CB-D4f" firstAttribute="bottom" secondItem="ndO-OX-73g" secondAttribute="bottom" constant="200" id="f8x-UG-Ard"/>
+                            <constraint firstItem="Nk6-KU-bjl" firstAttribute="leading" secondItem="SyK-CB-D4f" secondAttribute="leading" constant="25" id="fgG-Ie-Bqn"/>
+                            <constraint firstItem="Nk6-KU-bjl" firstAttribute="top" secondItem="SyK-CB-D4f" secondAttribute="top" constant="100" id="lqM-rZ-s2C"/>
+                            <constraint firstItem="ndO-OX-73g" firstAttribute="centerX" secondItem="Nss-wD-YUi" secondAttribute="centerX" id="n3e-dk-FnX"/>
+                            <constraint firstItem="SyK-CB-D4f" firstAttribute="trailing" secondItem="Nk6-KU-bjl" secondAttribute="trailing" constant="25" id="uze-Hn-yEd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SyK-CB-D4f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jhg-4u-D0H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="983" y="116"/>
         </scene>
     </scenes>
 </document>
