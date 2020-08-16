@@ -98,27 +98,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-Qf-TP6">
-                                <rect key="frame" x="0.0" y="50" width="414" height="592"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0O-zN-n6A">
-                                <rect key="frame" x="183" y="692" width="49" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <segue destination="d2d-0q-TY4" kind="unwind" unwindAction="unwind:" id="9x8-q4-JKR"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-dm-WeU">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdM-BR-tro">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fmn-CF-r2p">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="592"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACS-3E-Wo3">
+                                                <rect key="frame" x="169.5" y="692" width="75" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="0gf-1l-Nbi"/>
+                                                    <constraint firstAttribute="height" constant="50" id="w3r-fy-Em9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="戻る"/>
+                                                <connections>
+                                                    <segue destination="d2d-0q-TY4" kind="unwind" unwindAction="unwind:" id="ZEp-nH-VdU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ACS-3E-Wo3" firstAttribute="top" secondItem="Fmn-CF-r2p" secondAttribute="bottom" constant="50" id="Cgc-1i-TiZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="ACS-3E-Wo3" secondAttribute="bottom" constant="100" id="Hgs-QA-aKB"/>
+                                            <constraint firstItem="Fmn-CF-r2p" firstAttribute="top" secondItem="jdM-BR-tro" secondAttribute="top" constant="50" id="R0z-dS-bwn"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fmn-CF-r2p" secondAttribute="trailing" id="bMg-OE-B6e"/>
+                                            <constraint firstItem="Fmn-CF-r2p" firstAttribute="leading" secondItem="jdM-BR-tro" secondAttribute="leading" id="lQl-eh-KBf"/>
+                                            <constraint firstItem="ACS-3E-Wo3" firstAttribute="centerX" secondItem="jdM-BR-tro" secondAttribute="centerX" id="yys-q5-jmf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jdM-BR-tro" firstAttribute="leading" secondItem="BZe-dm-WeU" secondAttribute="leading" id="4Qq-Yk-icY"/>
+                                    <constraint firstAttribute="bottom" secondItem="jdM-BR-tro" secondAttribute="bottom" id="Ifp-Jm-c86"/>
+                                    <constraint firstItem="jdM-BR-tro" firstAttribute="top" secondItem="9FW-OB-Qqd" secondAttribute="top" id="O96-9v-C08"/>
+                                    <constraint firstItem="jdM-BR-tro" firstAttribute="top" secondItem="BZe-dm-WeU" secondAttribute="top" id="Q8V-Lm-CTH"/>
+                                    <constraint firstItem="jdM-BR-tro" firstAttribute="bottom" secondItem="9FW-OB-Qqd" secondAttribute="bottom" id="cAa-LB-S4x"/>
+                                    <constraint firstItem="jdM-BR-tro" firstAttribute="leading" secondItem="9FW-OB-Qqd" secondAttribute="leading" id="f1n-kF-UMe"/>
+                                    <constraint firstAttribute="trailing" secondItem="jdM-BR-tro" secondAttribute="trailing" id="jts-Oe-qxJ"/>
+                                    <constraint firstItem="jdM-BR-tro" firstAttribute="trailing" secondItem="9FW-OB-Qqd" secondAttribute="trailing" id="rA0-kP-Kg5"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="rIF-vS-QZi"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="9FW-OB-Qqd"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Luv-Qf-TP6" firstAttribute="trailing" secondItem="3Fj-xx-596" secondAttribute="trailing" id="CLc-Fa-Hrl"/>
-                            <constraint firstItem="h0O-zN-n6A" firstAttribute="top" secondItem="Luv-Qf-TP6" secondAttribute="bottom" constant="50" id="ipg-CI-OlQ"/>
-                            <constraint firstItem="h0O-zN-n6A" firstAttribute="top" secondItem="Luv-Qf-TP6" secondAttribute="bottom" constant="50" id="jIN-qD-MEN"/>
-                            <constraint firstItem="Luv-Qf-TP6" firstAttribute="leading" secondItem="3Fj-xx-596" secondAttribute="leading" id="nIy-49-JeA"/>
-                            <constraint firstItem="Luv-Qf-TP6" firstAttribute="top" secondItem="3Fj-xx-596" secondAttribute="top" constant="50" id="oVD-hW-5HS"/>
-                            <constraint firstItem="3Fj-xx-596" firstAttribute="bottom" secondItem="h0O-zN-n6A" secondAttribute="bottom" constant="75" id="q8z-Yd-rsy"/>
-                            <constraint firstItem="h0O-zN-n6A" firstAttribute="centerX" secondItem="EzJ-0n-aNg" secondAttribute="centerX" id="yyb-hk-Uhe"/>
+                            <constraint firstItem="BZe-dm-WeU" firstAttribute="trailing" secondItem="3Fj-xx-596" secondAttribute="trailing" id="FIp-L1-5Bm"/>
+                            <constraint firstAttribute="bottom" secondItem="BZe-dm-WeU" secondAttribute="bottom" id="JW9-y9-f5B"/>
+                            <constraint firstItem="BZe-dm-WeU" firstAttribute="leading" secondItem="3Fj-xx-596" secondAttribute="leading" id="hTF-Wc-3k3"/>
+                            <constraint firstItem="BZe-dm-WeU" firstAttribute="top" secondItem="3Fj-xx-596" secondAttribute="top" id="qNQ-wr-fov"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Fj-xx-596"/>
                     </view>
