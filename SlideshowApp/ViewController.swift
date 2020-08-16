@@ -12,6 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBAction func tapImage(_ sender: Any) {
+       
+        if self.timer != nil {
+            timer.invalidate()
+            timer = nil
+        }
+        
         performSegue(withIdentifier: "zoomImage", sender: nil)
     }
     
@@ -96,8 +102,6 @@ class ViewController: UIViewController {
     var timer: Timer!
     //　タイマー用の時間のための変数
     var timer_sec: Float = 0
-    
-    var setTitle: String = String()
     
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
