@@ -15,6 +15,13 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "zoomImage", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のSecondViewControllerを取得する
+        let secondViewController:SecondViewController = segue.destination as! SecondViewController
+        // 遷移先のSecondViewControllerで宣言しているselectedImageに値を代入して渡す
+        secondViewController.selectImage = imageView.image!
+    }
+    
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     

@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="155" y="-102"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="PId-8j-iQM">
             <objects>
-                <viewController id="FA9-yC-IvI" sceneMemberID="viewController">
+                <viewController id="FA9-yC-IvI" customClass="SecondViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EzJ-0n-aNg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,6 +155,9 @@
                         <viewLayoutGuide key="safeArea" id="3Fj-xx-596"/>
                     </view>
                     <navigationItem key="navigationItem" id="OHK-kx-IiO"/>
+                    <connections>
+                        <outlet property="zoomImage" destination="Fmn-CF-r2p" id="BA0-13-R3c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vDj-uY-wyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="d2d-0q-TY4" userLabel="Exit" sceneMemberID="exit"/>

@@ -9,11 +9,16 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    @IBOutlet weak var zoomImage: UIImageView!
+        var selectImage = UIImage()
+            
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // 選択した画像を表示
+        zoomImage.image = selectImage
     }
     
 
