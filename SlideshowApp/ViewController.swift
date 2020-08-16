@@ -11,19 +11,17 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBAction func tapImage(_ sender: Any) {
-       
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // segueから遷移先のSecondViewControllerを取得する
+        let secondViewController:SecondViewController = segue.destination as! SecondViewController
+        
+        //　タイマーを停止する
         if self.timer != nil {
             timer.invalidate()
             timer = nil
         }
         
-        performSegue(withIdentifier: "zoomImage", sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // segueから遷移先のSecondViewControllerを取得する
-        let secondViewController:SecondViewController = segue.destination as! SecondViewController
         // 遷移先のSecondViewControllerで宣言しているselectedImageに値を代入して渡す
         secondViewController.selectImage = imageView.image!
     }
